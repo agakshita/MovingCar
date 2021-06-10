@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: backMove linear 15s infinite;
+}/* this was done do the cursor does not move during animation*/
+.sky{
+    height: 100vh;
+    width: 100vw ;
+    background: url(cloud2.png) no-repeat;
+    
+    position: absolute;
+    
+}
+.trees{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(trees.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: -128px;
+    
+}
+.road{
+    height: 50vh;
+    width: 900vw;
+    background:url(road.png);
+    
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation:  carMove linear 13s infinite reverse;
+}
+.car{
+    height: 100px;
+    width: 300px;
+    background-image: url(car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left:468px;
+    bottom: 17vh;
+    animation: shake linear 5s infinite;
+}
+
+.wheel1 img{
+    
+    width: 50px;
+    position: relative;
+    left: 30.5px;
+    top: 47px;
+     animation: wheelRotation linear .5s infinite ; 
+}
+
+.wheel2 img{
+    
+    width: 50px;
+    position: relative;
+    top: -6px;
+    left: 212px;
+   animation: wheelRotation linear .5s infinite;
+}
+/* keyframes is used for animation*/
+@keyframes wheelRotation{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes carMove{
+    100%{
+        transform: translateX(-400vw);
+    }
+}
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes backMove{
+    0%{
+        transform: translateY(-25px);
+        
+    }
+    50%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(-25px);
+    }
+}
